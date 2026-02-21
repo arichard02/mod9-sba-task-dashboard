@@ -1,0 +1,13 @@
+.task {
+  border: 2px solid red;
+  margin-bottom: 10px;
+}
+.task-completed {
+ border: 2px solid green;
+  margin-bottom: 10px;
+}
+
+.task-in-progress {
+  border: 2px solid yellow;
+  margin-bottom: 10px;
+}
