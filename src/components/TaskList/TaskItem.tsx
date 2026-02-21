@@ -38,7 +38,7 @@ const [currentStatus, setCurrentStatus] = useState<TaskStatus>(status);
       <p>{currentStatus}</p>
       <p>{priority}</p>
       <p>{dueDate}</p>
-      <button onClick={markAsComplete}>Mark As Complete</button>
+      <button className="button" onClick={markAsComplete}>Mark As Complete</button>
     </div>
   );
 }

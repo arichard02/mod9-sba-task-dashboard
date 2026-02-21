@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-    <h1>My Task List</h1>
+    <h1 className='text-3xl font-bold mb-2'>My Task List</h1>
     <TaskList />
 
     </>
