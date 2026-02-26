@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import TaskList from './components/TaskList/TaskList'
 
 
 
 import './App.css'
+import Dashboard from './components/Dashboard/Dashboard'
 
 
 function App() {
 
 
   return (
-    <>
-    <h1 className='text-3xl font-bold mb-2'>My Task List</h1>
-    <TaskList />
-
-    </>
+   
+    <Dashboard />
   )
 }
 

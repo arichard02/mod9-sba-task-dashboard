@@ -1,44 +1,49 @@
-import type { Task, TaskStatus } from "../../types";
-import { useState } from "react";
+// the job of task item is to display data 
 
-// export type TaskStatus = "pending" | "in-progress" | "completed";
+
+import type { Task, TaskStatus } from "../../types";
+
+interface Props {
+  task: Task;
+  onStatusChange: (id: string, status: TaskStatus) => void;
+}
+
+
 
 export default function TaskItem({
 
-  title,
-  description,
-  status,
-  priority,
-  dueDate,
-}: Task) {
+  task: { id, title, description, status, priority, dueDate },
+  onStatusChange,
+}: Props) {
 
- // create editable state from the incoming status
-const [currentStatus, setCurrentStatus] = useState<TaskStatus>(status);
-
-  function markAsComplete() {
-    setCurrentStatus("completed");
-  }
 
   function getStyle() {
-    if(currentStatus === "completed"){
-      return "task-completed"; 
-    } 
-    else if (currentStatus === "in-progress") {
-      return "task-in-progress"
-    }
-    else {
-      return "task"
-    } 
+    
+    if(status === "completed") return "task-completed"; 
+    if (status === "in-progress") return "task-in-progress";
+      return "task";
+    
   }
 
   return (
-    <div className={getStyle()} >
+    <div className={getStyle()}>
       <p>{title}</p>
       <p>{description}</p>
-      <p>{currentStatus}</p>
+      <p>{status}</p>
       <p>{priority}</p>
       <p>{dueDate}</p>
-      <button className="button" onClick={markAsComplete}>Mark As Complete</button>
+
+
+      {/*  only show button if task is completed  */}
+      {status !== "completed" && (
+
+       // button updates parent
+      <button className="button" 
+      onClick={() => onStatusChange(id, "completed")}
+      >
+       Mark As Complete
+      </button>
+      )}
     </div>
   );
 }
