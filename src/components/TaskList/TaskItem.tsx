@@ -5,7 +5,8 @@ import type { Task, TaskStatus } from "../../types";
 
 interface Props {
   task: Task;
-  onStatusChange: (id: string, status: TaskStatus) => void;
+  onStatusChange: (id: string, status: TaskStatus) => void; 
+  onDelete: (id: string) => void;
 }
 
 
@@ -14,6 +15,7 @@ export default function TaskItem({
 
   task: { id, title, description, status, priority, dueDate },
   onStatusChange,
+  onDelete,
 }: Props) {
 
 
@@ -44,6 +46,11 @@ export default function TaskItem({
        Mark As Complete
       </button>
       )}
+
+      <button className="button" onClick={() => onDelete(id)}>
+        Delete
+      </button>
+
     </div>
   );
 }

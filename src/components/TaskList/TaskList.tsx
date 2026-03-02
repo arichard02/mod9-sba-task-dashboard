@@ -7,9 +7,10 @@ import TaskItem from "./TaskItem";
 interface TaskListProps {
   tasks: Task[];
   onStatusChange: (id: string, status: TaskStatus) => void;
+  onDelete: (id: string) => void;
 }
 
-export default function TaskList({ tasks,onStatusChange,
+export default function TaskList({ tasks,onStatusChange, onDelete
 }: TaskListProps) {
   return (
    <div>
@@ -18,6 +19,7 @@ export default function TaskList({ tasks,onStatusChange,
           key={`task_${task.id}`}
           task={task}
           onStatusChange={onStatusChange}
+          onDelete={onDelete}
         />
       ))}
     </div>

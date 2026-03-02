@@ -51,13 +51,19 @@ export default function Dashboard() {
    function handleAddTask(newTask: Task) {
     setTasks((prevTasks) => [...prevTasks, newTask]);
   }
+
+  function handleDelete(id: string) {
+    setTasks((prevTask) => prevTask.filter((task) => task.id !==id))
+  }
+
+
   return (
     <div className="dashboard">
       <h1 className="text-3xl font-bold mb-2">My Task List</h1>
 
       <TaskForm onAddTask={handleAddTask} />
 
-      <TaskList tasks={tasks} onStatusChange={handleStatusChange} />
+      <TaskList tasks={tasks} onStatusChange={handleStatusChange} onDelete={handleDelete}/>
           </div>
   );
 }
