@@ -1,8 +1,9 @@
 import { useState } from "react";
 import type { Task, TaskStatus } from "../../types";
 import TaskList from "../TaskList/TaskList";
+import TaskForm from "../TaskForm/TaskForm";
 
-// starting task 1 marked completed
+// initial task that shows when app is loaded
 const InitialTasks: Task[] = [
   {
     id: "001",
@@ -37,6 +38,7 @@ export default function Dashboard() {
   // setTask is function to update state
   const [tasks, setTasks] = useState<Task[]>(InitialTasks);
 
+// update task status
   function handleStatusChange(id: string, newStatus: TaskStatus) {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
@@ -45,10 +47,17 @@ export default function Dashboard() {
     );
   }
 
+  // add new task from task form
+   function handleAddTask(newTask: Task) {
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+  }
   return (
-    <div>
+    <div className="dashboard">
       <h1 className="text-3xl font-bold mb-2">My Task List</h1>
+
+      <TaskForm onAddTask={handleAddTask} />
+
       <TaskList tasks={tasks} onStatusChange={handleStatusChange} />
-    </div>
+          </div>
   );
 }
