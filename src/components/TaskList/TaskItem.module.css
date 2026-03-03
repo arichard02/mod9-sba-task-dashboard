@@ -1,0 +1,134 @@
+/* 
+.dashboard {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+
+
+.task.completed { ... }
+.task.in-progress { ... }
+.task.pending { ... }
+
+.priority.low { color: green; }
+.priority.medium { color: orange; }
+.priority.high { color: red; } */
+
+.dashboard {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Task statuses */
+/* .task {
+  border: 2px solid #ef4444;
+  background-color: #fef2f2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+} */
+
+.task {
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fee2e2;
+  color: black;
+}
+
+.taskCompleted {
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #dcfce7;
+  color: black;
+}
+
+.taskInProgress {
+  border: 2px solid yellow;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fef9c3;
+  color: black;
+}
+
+/* .dark {
+  color: black;
+} */
+
+/* 
+.priority {
+  font-weight: bold;
+}
+
+.low {
+  color: green;
+}
+
+.medium {
+  color: orange;
+}
+
+.high {
+  color: red;
+} */
+
+.button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.completed {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+.inProgress {
+  border-color: #facc15;
+  background-color: #fefce8;
+}
+
+/* Priority */
+.low {
+  color: green;
+}
+
+.medium {
+  color: orange;
+}
+
+.high {
+  color: red;
+}
+
+/* .dashboard {
+  --task-bg: #ffffff;
+  --task-text: #111827;
+} */
+
+/* .dashboard.dark {
+  --task-bg: #1f2937;
+  --task-text: #f9fafb;
+} */

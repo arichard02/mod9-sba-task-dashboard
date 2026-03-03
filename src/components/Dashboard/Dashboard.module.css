@@ -1,0 +1,85 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Light / Dark Theme */
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Sort dropdown */
+.sortContainer {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sortSelect {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  transition: all 0.2s ease;
+}
+
+.dark .sortSelect {
+  background-color: #2c2c2c;
+  color: white;
+  border-color: #555;
+}
+
+.sortSelect:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Stats and Clear Completed button */
+.statsContainer {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef2ff;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.dark .statsContainer {
+  /* background-color: #2c2c2c; */
+    background-color: #2c2c2c;
+  color: white;
+  border-color: #555
+}
+
+.clearButton {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ef4444;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clearButton:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.clearButton:active {
+  transform: translateY(0);
+}

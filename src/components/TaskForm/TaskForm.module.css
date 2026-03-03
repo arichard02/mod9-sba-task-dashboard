@@ -1,0 +1,96 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Inputs & textarea */
+.input,
+.textarea,
+.select,
+.date {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+/* Focus state */
+.input:focus,
+.textarea:focus,
+.select:focus,
+.date:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Textarea resize control */
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button */
+.button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #6366f1;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.dashboard {
+  --task-text: black;
+}
+
+.dashboard.dark {
+  --task-text: white;
+}
+
+.task {
+  color: var(--task-text);
+}
+
+/* Error text */
+.error {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+:global(.dark) .input,
+:global(.dark) .textarea,
+:global(.dark) .select,
+:global(.dark) .date {
+  background-color: #1f2937;
+  color: white;
+  border-color: #374151;
+}
+:global(.dark) .task {
+  background-color: #1f2937;
+}
+
+:global(.dark) .completed {
+  border-color: #22c55e;
+  background-color: #052e16;
+  color: #bbf7d0;
+}
+
+:global(.dark) .inProgress {
+  background-color: #422006;
+  color: #fde68a;
+}
